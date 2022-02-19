@@ -20,7 +20,7 @@
 			<div class="top-header__menu menu">
 				<nav class="menu__body">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+						<li class="menu__item"><a data-popup="#popup" href="" class="menu__link">О компании</a></li>
 						<li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
 						<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
 					</ul>
@@ -589,7 +589,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="slider-reviews__row">
+						<div class="slider-btns__row">
 							<button type="button" class="swiper-button-prev"></button>
 							<button type="button" class="swiper-button-next"></button>
 						</div>
@@ -724,9 +724,52 @@
 		</div>
 	</div>
 </footer>
+
 	</div>
 
-	
+	<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<!-- <button data-close type="button" class="popup__close">Закрыть</button> -->
+			<form action="#" class="popup__form">
+				<h2 class="popup__title">Закажите обратный звонок</h2>
+				<p class="popup__text popup__text_w popup__text_black">Менеджер перезвонит в указанное время
+					и подробно ответит на все ваши вопросы</p>
+				<p class="popup__text popup__text_w">Менеджер свяжется с вами, чтобы уточнить удобное время для выезда замерщика
+					к вам</p>
+				<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите номер телефона"
+					class="input popup__input">
+				<p class="popup__text">В мессенджер мы отправим полезные материалы по подбору профиля и самые популярные
+					варианты окон, которые выбирают 9 из 10 заказчиков</p>
+				<ul class="popup__social social-popup">
+					<li class="social-popup__item social-popup__item_whatsapp"">
+					<a href="" class=" social-popup__link">WhatsApp</a>
+					</li>
+					<li class="social-popup__item social-popup__item_viber"">
+					<a href="" class=" social-popup__link">Viber</a>
+					</li>
+					<li class="social-popup__item social-popup__item_tg"">
+					<a href="" class=" social-popup__link">Telegram</a>
+					</li>
+				</ul>
+				<p class="popup__text">Укажите удобное время для выезда замерщика</p>
+				<div class="options popup__options">
+					<div class="options__item">
+						<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
+						<label for="o_1" class="options__label"><span class="options__text">Как можно быстрее</span></label>
+					</div>
+					<div class="options__item">
+						<input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+						<label for="o_2" class="options__label"><span class="options__text">В конкретное время</span></label>
+					</div>
+				</div>
+				<button class="popup__btn">Записаться на бесплатный замер</button>
+				<span class="popup__text popup__text_w popup__text_bottom">Вы соглашаетесь с условиями обработки
+					персональных данных (ознакомиться) </span>
+			</form>
+		</div>
+	</div>
+</div>
 
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=51092280-e018-4241-bc97-180570de25d4&lang=ru_RU"></script>
 <script src="js/app.min.js"></script>
